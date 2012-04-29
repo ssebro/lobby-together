@@ -4,18 +4,20 @@
   "manifest_version": 1,
   "description": "This extension allows internet users around the world to easily lobby companies, who will in turn lobby governments. For now, we're just targeting Reddit & CISPA.",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["jquery.min.js","background.js"]
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["jquery.min.js","contentscript.js"]
     }],
+  
   "page_action": {
     "default_icon": "icon.png", // optional
     "default_title": "Do action"    // optional; shown in tooltip
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "http://ssebro.github.com/lobby-together/"
   ]
 }
